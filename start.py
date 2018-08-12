@@ -1,5 +1,5 @@
 def calculate_points(hand):
-
-    point = 
+    assert len(hand) == 13
+    points = 5
 
     return points
