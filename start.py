@@ -19,7 +19,7 @@ def calculate_points_of_card(card):
     else: 
         return 0 
     
-hand = cards
-calculate_points(hand)
-
-
+def is_balanced_hand(hand):
+    
+    
+    return False
