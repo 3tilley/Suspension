@@ -11,3 +11,5 @@ def make_card(card_str):
     return Card(suit, rank)
 
 cards = [make_card(c) for c in ["AS", "10H", "QD", "QC", "KC", "2D", "3D", "4D", "5D", "6D", "2C", "3C", "4C"]]
+
+suits = ["S","H","D","C"]
