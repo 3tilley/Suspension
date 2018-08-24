@@ -1,4 +1,4 @@
-import alphabet
+from alphabet import count_vowels
 
 alphabet = map(chr, range(65, 91))
 
