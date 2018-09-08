@@ -36,9 +36,10 @@ def return_longest_suit(hand):
     return "S"
 
 def count_longest_suit(hand, suit):
-    return len([i if i.Suit == suit for i in hand])
+    return len([i for i in hand if i.Suit == suit ])
 
 def opening_bid(hand):
+    points = calculate_points(hand)
     if is_balanced_hand(hand):
         if points < 12:
             return "pass"
@@ -48,12 +49,12 @@ def opening_bid(hand):
             return "1NT"
         elif 20 <= points <= 21:
             return "2NT"
-    elif:
+    else:
         if (5 <= points <= 10):
             s = return_longest_suit(hand)
-            if count_longest_suit(hand,s) > 5:
+            if count_longest_suit(hand, s) > 5:
                 return "2" + s
-    else:
-        return "pass"
+        else:
+            return "pass"
         
     
