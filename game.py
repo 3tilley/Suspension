@@ -14,7 +14,6 @@ def deal():
     while len(deck) > 0:
         hands[card_dealt % 4].append(deck.pop())
         card_dealt += 1
-        #print(deck)
 
     return {"N": hand.Hand(hands[0]),
             "E": hand.Hand(hands[1]),
@@ -33,7 +32,7 @@ if __name__ == "__main__":
             dl = deal()
             print("Your hand is:")
             h = dl["N"]
-            print(h.cards)
+            print(h.cards_by_suit())
             print("We suggest opening:")
             opening_bid = start.opening_bid(h.cards)
             print(opening_bid)
