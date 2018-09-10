@@ -30,4 +30,5 @@ def test_is_unbalanced_hand():
 
 def test_hand_pretty_print():
     test_hand = balanced_hand
-    assert test_hand.pretty_print() == ""
+    #print(test_hand.pretty_print())
+    test_hand.pretty_print()
