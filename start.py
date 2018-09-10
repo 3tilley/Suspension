@@ -1,9 +1,9 @@
 import card
+import hand
 
 def calculate_points(hand):
-    #assert len(hand) == 13, "your hand needs 13 cards"
     points = 0
-    for card in hand: 
+    for card in hand.cards: 
         points = points + calculate_points_of_card(card)
     return points
 
@@ -35,10 +35,14 @@ def is_balanced_hand(hand):
         return True
     
 def return_longest_suit(hand):
-    return "S"
+    suits = hand.cards_by_suit()
+    print(suits)
+    counts = {len(v): k for k, v in suits.items()}
+    longest_count = max(counts.keys())
+    return counts[longest_count]
 
 def count_longest_suit(hand, suit):
-    return len([i for i in hand if i.Suit == suit ])
+    return len([i for i in hand.cards if i.suit == suit ])
 
 def opening_bid(hand):
     points = calculate_points(hand)

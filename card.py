@@ -17,4 +17,4 @@ cards = [make_card(c) for c in ["AS", "10H", "QD", "QC", "KC", "2D", "3D", "4D",
 
 suits = ["S","H","D","C"]
 
-whole_deck = [make_card(r + s) for s in suits for r in (list([str(i) for i in range(1,11)]) + ["J", "Q", "K", "A"])]
+whole_deck = [make_card(r + s) for s in suits for r in (list([str(i) for i in range(2,11)]) + ["J", "Q", "K", "A"])]

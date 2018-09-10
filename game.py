@@ -32,9 +32,9 @@ if __name__ == "__main__":
             dl = deal()
             print("Your hand is:")
             h = dl["N"]
-            print(h.cards_by_suit())
+            print(h.pretty_print())
             print("We suggest opening:")
-            opening_bid = start.opening_bid(h.cards)
+            opening_bid = start.opening_bid(h)
             print(opening_bid)
 
             print_hand_intro()
