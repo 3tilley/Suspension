@@ -22,9 +22,11 @@ def calculate_points_of_card(card):
 def is_balanced_hand(hand):
     singleton_or_void = 0
     for suit in card.suits:
-        suit = 0
-    for c in hand:
-        if c.suit == suit:
+        suit_count = 0
+        for c in hand.cards:
+            if c.suit == suit:
+                suit_count += 1
+        if suit_count < 2:
             singleton_or_void = singleton_or_void + 1
     
     if singleton_or_void > 1:
