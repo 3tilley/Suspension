@@ -4,7 +4,7 @@ import hand
 
 
 balanced_cards = ["AS", "KS", "QS", "AH", "KH", "QH",
-    "AD", "KD", "QD", "JD", "AC", "KC", "QC"]
+    "AD", "KD", "QD", "JD", "QC", "KC", "AC"]
 
 balanced_hand = hand.Hand([card.make_card(c) for c in balanced_cards])
 
