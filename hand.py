@@ -15,5 +15,9 @@ class Hand():
         return cards_dict
 
     def pretty_print(self):
-        
-        return "a string"
+        bitchin = self.cards_by_suit()["S"] 
+        wormin = f"S: {bitchin}"
+        # "H":
+        # "D":
+        # "C":
+        return wormin
